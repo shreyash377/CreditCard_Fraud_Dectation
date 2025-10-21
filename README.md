@@ -48,15 +48,6 @@ To address this, undersampling was applied to balance the dataset before trainin
 ---
 
 ##  Problems Faced &  Solutions
-
-Problem 1 : Imbalanced Dataset
-
-Issue:
-The dataset contained very few fraud cases, causing models to be biased toward non-fraud predictions.
-
-Solution:
-Applied undersampling to create a balanced dataset of fraud and valid transactions.
-
 Problem 1: Imbalanced Dataset
 
 Issue:
@@ -64,16 +55,14 @@ The dataset contained very few fraud cases, causing models to be biased toward n
 
 Solution:
 Applied undersampling to create a balanced dataset of fraud and valid transactions.
-
+--------------------------------------------------------------------------------------------------------------------------------
 Problem 2:
 The dataset provided by the company contained hidden or anonymized features (e.g., V1, V2, ..., V28).
 Because of this, it was impossible to understand the real meaning of each feature or determine their business relevance.
 This also made feature selection and interpretability challenging.
 
 Solution:
-
 Treated all anonymous features as numerical inputs and applied scaling (StandardScaler) to normalize them.
-
 Relied on correlation analysis, model-based feature importance (RandomForest feature_importances_), and statistical tests to select relevant features.
 
 Focused on model performance metrics (precision, recall, F1-score) rather than feature interpretation.
